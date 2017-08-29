@@ -28,6 +28,8 @@ If you'd like to include images to show how the pipeline works, here is how to i
 ![alt text][image1]
 
 
+## grayscale --> Gaussian smooth --> Canny edge detection --> ROI --> Hough transformation --> pic overlay
+
 ### 2. Identify potential shortcomings with your current pipeline
 
 
