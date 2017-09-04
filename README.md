@@ -43,3 +43,24 @@ Another shortcoming could be ...
 A possible improvement would be to ...
 
 Another potential improvement could be to ...
+
+Scenario 1
+kernel_size = 5
+low_threshold = 120
+high_threshold = 200
+min_line_len = 3
+max_line_gap = 100
+
+Scenario 2
+kernel_size = 5
+low_threshold = 80
+high_threshold = 200
+min_line_len = 3
+max_line_gap = 100
+
+Scenario 3
+kernel_size = 7
+low_threshold = 100
+high_threshold = 200
+min_line_len = 3
+max_line_gap = 100
