@@ -64,3 +64,5 @@ low_threshold = 100
 high_threshold = 200
 min_line_len = 3
 max_line_gap = 100
+
+parameters optimization play a positive role in processing the image. But there are still some short lines detected of shadows, which requires a slope filter.
