@@ -30,6 +30,10 @@ If you'd like to include images to show how the pipeline works, here is how to i
 
 ## grayscale --> Gaussian smooth --> Canny edge detection --> ROI --> Hough transformation --> pic overlay
 
+techniques applied in challenge:
+1. slope filter. > 0.5, < -0.5.
+2. RGB filter to identify yellow lanes. red_threshold = 200；green_threshold = 50；blue_threshold = 0
+
 ### 2. Identify potential shortcomings with your current pipeline
 
 
@@ -43,6 +47,8 @@ Another shortcoming could be ...
 A possible improvement would be to ...
 
 Another potential improvement could be to ...
+merge the parameters matrix to fit all scenarios.
+
 
 Scenario 1
 kernel_size = 5
