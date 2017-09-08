@@ -32,7 +32,7 @@ If you'd like to include images to show how the pipeline works, here is how to i
 
 techniques applied in challenge:
 1. slope filter. > 0.5, < -0.5.
-2. RGB filter to identify yellow lanes. red_threshold = 200；green_threshold = 50；blue_threshold = 0
+2. RGB filter to identify yellow lanes. red_threshold = 200；green_threshold = 100；blue_threshold = 0
 
 ### 2. Identify potential shortcomings with your current pipeline
 
@@ -64,11 +64,12 @@ high_threshold = 200
 min_line_len = 3
 max_line_gap = 100
 
+w/o color filter video use this parameter set
 Scenario 3
 kernel_size = 7
-low_threshold = 100
-high_threshold = 200
-min_line_len = 3
+low_threshold = 150
+high_threshold = 250
+min_line_len = 5
 max_line_gap = 100
 
 parameters optimization play a positive role in processing the image. But there are still some short lines detected of shadows, which requires a slope filter.
