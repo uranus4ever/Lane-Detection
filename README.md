@@ -31,11 +31,11 @@ My pipeline consisted of 7 steps. First, I converted the images to grayscale, th
 
 The following picture shows the main process of pipeline: 
 
-![https://github.com/uranus4ever/Lane-Detection/master/PipelineProcess.jpg]
+![](https://github.com/uranus4ever/Lane-Detection/master/PipelineProcess.jpg)
 
 To improve the detection result, I tune the Canny function with multiple parameters set. It is visualized as th following picture:
 
-![https://github.com/uranus4ever/Lane-Detection/master/CannyParameters.png]
+![](https://github.com/uranus4ever/Lane-Detection/master/CannyParameters.png)
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by SlopeFilter and LineMerge:
 * SlopeFilter:
@@ -74,7 +74,7 @@ Yellow2White[threshold] = [250, 250, 250]
 ```
 
 The following comparison picture clearly shows the practical effectiveness of ColorSelection:
-![https://github.com/uranus4ever/Lane-Detection/master/Comparison_colorfilter.png]
+![](https://github.com/uranus4ever/Lane-Detection/master/Comparison_colorfilter.png)
 
 ### 2. Potential shortcomings with current pipeline
 
@@ -84,18 +84,20 @@ One potential shortcoming would be what would happen when the lane lines are not
 
 A possible improvement would be to merge the parameters matrix to fit all scenarios.
 
-
 * Scenario 1 - normal mode
+```
 kernel_size = 5
 low_threshold = 50
 high_threshold = 150
 min_line_len = 20
 max_line_gap = 100
+```
 
 * Scenario 2 - challenge mode
+```
 kernel_size = 7
 low_threshold = 150
 high_threshold = 250
 min_line_len = 5
 max_line_gap = 100
-
+```
