@@ -9,7 +9,7 @@ The goals / steps of this project are the following:
 * Keep algorithm robust enough to identify lane lines on complicated road background, such as shadows, dirty road surface.
 
 The output picture with marked lane lines look like this:
-![LaneDectionExamplePic](https://github.com/uranus4ever/Lane-Detection/master/LaneDectionExamplePic.png)  
+![LaneDectionExamplePic](https://github.com/uranus4ever/Lane-Detection/blob/master/LaneDectionExamplePic.png)  
 
 
 ## Usage
