@@ -32,11 +32,11 @@ My pipeline consisted of 7 steps. First, I converted the images to grayscale, th
 
 The following picture shows the main process of pipeline: 
 
-![PipelineProcess](https://github.com/uranus4ever/Lane-Detection/master/PipelineProcess.jpg)
+![PipelineProcess](https://github.com/uranus4ever/Lane-Detection/blob/master/PipelineProcess.jpg)
 
 To improve the detection result, I tune the Canny function with multiple parameters set. It is visualized as th following picture:
 
-![CannyParameters](https://github.com/uranus4ever/Lane-Detection/master/CannyParameters.png)
+![CannyParameters](https://github.com/uranus4ever/Lane-Detection/blob/master/CannyParameters.png)
 
 And I calibrate the key parameters to fit all scenarios in the video.
 
@@ -85,7 +85,7 @@ Yellow2White[threshold] = [250, 250, 250]
 ```
 
 The following comparison picture clearly shows the practical effectiveness of ColorSelection:
-![Comparison_colorfilter](https://github.com/uranus4ever/Lane-Detection/master/Comparison_colorfilter.png)
+![Comparison_colorfilter](https://github.com/uranus4ever/Lane-Detection/blob/master/Comparison_colorfilter.png)
 
 ### 2. Potential shortcomings with current pipeline
 
