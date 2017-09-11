@@ -95,3 +95,16 @@ One potential shortcoming would be what would happen when the lane lines are not
 
 A possible improvement would be to create the link between two continuous picture in the video. That would help to make output detection more natural if eliminating sudden appearance/disappearance.
 
+There are other solutions here. Please consider the following,
+threshold = 50
+min_line_len = 100
+max_line_gap = 160
+
+Please examine the parameters by modifying them separately. That will allow you to identify how each parameter affects the lane line. For example,
+
+'max_line_gap' defined the maximum distance between segments that will be connected to a single line.
+'min_line_len' defined the minimum length of a line that will be created.
+Increasing these parameters will create smoother and longer lines
+
+"threshold" defined the minimum number of intersections in a given grid cell that are required to choose a line.
+Increasing this parameter, the filter will choose longer lines and ignore short lines.
