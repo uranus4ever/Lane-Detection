@@ -16,11 +16,18 @@ The output picture with marked lane lines look like this:
 If you do not install python packages, the following Jupyter Notebook file could still be opened as HTML to review the coding ideas and output videos. 
 The source code Python file is uploaded as well, which require Python 3.5 and related packages.
 
-| Code | Output Video | Comments |
-| :---:        |     :---:      |         :---: |
-| P1.ipynb (Lane-project-challenge.py)   | solidWhiteRight.mp4 solidYellowLeft.mp4 challenge.mp4     | The source code covers all three output videos   |
+| Code          | Output Video | Comments |
+| :---:         |     :---:      |         :---: |
+| P1.ipynb <br>Lane-project-challenge.py   | solidWhiteRight.mp4 <br>solidYellowLeft.mp4 <br>challenge.mp4     | The source code fits all three output videos   |
 
-You can get the input video from <https://github.com/CarND-LaneLines-P1>
+[//]: # (Image References)
+
+[image1]: ./PipelineProcess.jpg "PipelineProcess"
+[image2]: ./CannyParameters.png "Canny Parameters"
+[image3]: ./Comparison_colorfilter "Color Filter"
+[video1]: ./solidWhite.mp4 "Video1"
+[video2]: ./solidYellowLeft.mp4 "Video2"
+[video3]: ./challenge.mp4 "Video3-challenge"
 
 ---
 
@@ -32,11 +39,11 @@ My pipeline consisted of 7 steps. First, I converted the images to grayscale, th
 
 The following picture shows the main process of pipeline: 
 
-![PipelineProcess](https://github.com/uranus4ever/Lane-Detection/blob/master/PipelineProcess.jpg)
+![alt text][image1]
 
 To improve the detection result, I tune the Canny function with multiple parameters set. It is visualized as th following picture:
 
-![CannyParameters](https://github.com/uranus4ever/Lane-Detection/blob/master/CannyParameters.png)
+![alt text][image2]
 
 And I calibrate the key parameters to fit all scenarios in the video.
 
@@ -85,13 +92,27 @@ Yellow2White[threshold] = [250, 250, 250]
 ```
 
 The following comparison picture clearly shows the practical effectiveness of ColorSelection:
-![Comparison_colorfilter](https://github.com/uranus4ever/Lane-Detection/blob/master/Comparison_colorfilter.png)
 
-### 2. Potential shortcomings with current pipeline
+![alt text][image3]
+
+### 2. Output Merge videos
+
+Does the pipeline established with the test images work to process the video?
+<br>It sure does! Here's a link to my video. It looks stable, isn't it?
+![alt text][video1]
+
+The above video is too easy? Let's try something harder - yellow lane.
+![alt text][video2]
+
+The real challenge is coming! The next video combines daylight and shadow on the road, which requires algorithm robust enought to cover complex conditions.
+![alt text][video3]
+
+
+### 3. Potential shortcomings with current pipeline
 
 One potential shortcoming would be what would happen when the lane lines are not clear due to worn or on dirty background. Or, in other cases, if there are more than one line on one side on the road, the pipeline will be confused. For example, the lanes are modified to another position but old ones can still be identified. 
 
-### 3. Suggest possible improvements
+### 4. Suggest possible improvements
 
 A possible improvement would be to create the link between two continuous picture in the video. That would help to make output detection more natural if eliminating sudden appearance/disappearance.
 
