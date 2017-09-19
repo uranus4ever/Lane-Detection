@@ -24,7 +24,7 @@ The source code Python file is uploaded as well, which requires Python 3.5 and r
 
 [image1]: ./PipelineProcess.jpg "PipelineProcess"
 [image2]: ./CannyParameters.png "Canny Parameters"
-[image3]: ./Comparison_colorfilter "Color Filter"
+[image3]: ./Comparison_colorfilter.png "Color Filter"
 [video1]: ./solidWhite.mp4 "Video1"
 [video2]: ./solidYellowLeft.mp4 "Video2"
 [video3]: ./challenge.mp4 "Video3-challenge"
