@@ -14,7 +14,7 @@ The output picture with marked lane lines look like this:
 
 ## Usage
 If you do not install python packages, the following Jupyter Notebook file could still be opened as HTML to review the coding ideas and output videos. 
-The source code Python file is uploaded as well, which require Python 3.5 and related packages.
+The source code Python file is uploaded as well, which requires Python 3.5 and related packages.
 
 | Code          | Output Video | Comments |
 | :---:         |     :---:      |         :---: |
@@ -95,18 +95,14 @@ The following comparison picture clearly shows the practical effectiveness of Co
 
 ![alt text][image3]
 
-### 2. Output Merge videos
+### 2. Output Videos
 
 Does the pipeline established with the test images work to process the video?
-<br>It sure does! Here's a link to my video. It looks stable, isn't it?
-![alt text][video1]
+<br>It sure does! Here's a [link to my video](./solidWhiteRight.mp4). It looks stable, isn't it?
 
-The above video is too easy? Let's try something harder - yellow lane.
-![alt text][video2]
+The above video is too easy? Let's try something harder - [yellow lane](./solidYellowLeft.mp4).
 
-The real challenge is coming! The next video combines daylight and shadow on the road, which requires algorithm robust enought to cover complex conditions.
-![alt text][video3]
-
+The real challenge is coming! The next video combines daylight and shadow on the road, which requires algorithm robust enought to cover complex conditions. [See Challenge video](./challenge.mp4).
 
 ### 3. Potential shortcomings with current pipeline
 
