@@ -1,5 +1,16 @@
 # **Project: Finding Lane Lines on the Road** 
 
+[//]: # (Image References)
+
+[image1]: ./Img/PipelineProcess.jpg "PipelineProcess"
+[image2]: ./Img/CannyParameters.png "Canny Parameters"
+[image3]: ./Img/Comparison_colorfilter.png "Color Filter"
+[video1]: ./Img/solidWhite.mp4 "Video1"
+[video2]: ./Img/solidYellowLeft.mp4 "Video2"
+[video3]: ./Img/challenge.mp4 "Video3-challenge"
+[gif1]: ./Img/challenge.gif "Challenge_gif"
+
+
 ## **Goals / Steps**
 
 The goals / steps of this project are the following:
@@ -8,8 +19,8 @@ The goals / steps of this project are the following:
 * Detect continuous straight lines or dash lines
 * Keep algorithm robust enough to identify lane lines on complicated road background, such as shadows, dirty road surface.
 
-The output picture with marked lane lines look like this:
-![LaneDectionExamplePic](https://github.com/uranus4ever/Lane-Detection/blob/master/LaneDectionExamplePic.png)  
+The output video with marked lane lines look like this gif:
+![alt text][gif1]
 
 
 ## Usage
@@ -20,14 +31,10 @@ The source code Python file is uploaded as well, which requires Python 3.5 and r
 | :---:         |     :---:      |         :---: |
 | P1.ipynb <br>Lane-project-challenge.py   | solidWhiteRight.mp4 <br>solidYellowLeft.mp4 <br>challenge.mp4     | The source code fits all three output videos   |
 
-[//]: # (Image References)
-
-[image1]: ./PipelineProcess.jpg "PipelineProcess"
-[image2]: ./CannyParameters.png "Canny Parameters"
-[image3]: ./Comparison_colorfilter.png "Color Filter"
-[video1]: ./solidWhite.mp4 "Video1"
-[video2]: ./solidYellowLeft.mp4 "Video2"
-[video3]: ./challenge.mp4 "Video3-challenge"
+## Dependencies
+* Numpy
+* cv2
+* moviepy
 
 ---
 
