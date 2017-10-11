@@ -99,3 +99,6 @@ ENV/
 
 # mypy
 .mypy_cache/
+*.jpeg
+Img/cmd.txt
+GIF_maker.py

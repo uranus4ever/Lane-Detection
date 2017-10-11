@@ -11,6 +11,7 @@ import cv2
 import math
 # Import everything needed to edit/save/watch video clips
 from moviepy.editor import VideoFileClip
+from skimage import transform
 # from IPython.display import HTML
 
 def YellowFilter(img):
@@ -159,23 +160,28 @@ def process_image(image):
 
     line_img = hough_lines(masked_edges, rho, theta, threshold, min_line_len, max_line_gap)
     result = weighted_img(line_img, image, α=0.8, β=1., λ=0.)
+
+    # transform image size to half in gif
+    # result = transform.rescale(result, [0.5, 0.5])
     return result
 
-pic = mpimg.imread('challenge_pic_clean.jpg')
-output = process_image(pic)
-plt.imshow(output)
-plt.show()
+# pic = mpimg.imread('../carnd-lanelines-p1/test_images/whiteCarLaneSwitch.jpg')
+# output = process_image(pic)
+# plt.imshow(output)
+# plt.show()
 
-white_output = 'C:/Users/scq/carnd-lanelines-p1/test_videos_output/challenge_advanced.mp4'
+video_output = './challenge.mp4'
+# gif_output = './solidYellowLeft.gif'
 ## To speed up the testing process you may want to try your pipeline on a shorter subclip of the video
 ## To do so add .subclip(start_second,end_second) to the end of the line below
 ## Where start_second and end_second are integer values representing the start and end of the subclip
 ## You may also uncomment the following line for a subclip of the first 5 seconds
-input_path = 'C:/Users/scq/carnd-lanelines-p1/test_videos/challenge.mp4'
-# clip1 = VideoFileClip(input_path).subclip(3,7)
-clip1 = VideoFileClip(input_path)
+input_path = '../carnd-lanelines-p1/test_videos/challenge.mp4'
+clip1 = VideoFileClip(input_path).subclip(2,4)
+# clip1 = VideoFileClip(input_path)
 white_clip = clip1.fl_image(process_image) #NOTE: this function expects color images!!
-white_clip.write_videofile(white_output, audio=False)
+white_clip.write_videofile(video_output, audio=False)
+# white_clip.write_gif(gif_output, fps=18)
 
 # #########
 # Debug
